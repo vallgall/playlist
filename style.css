@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+body {
+    background-color: black;
+    color: #EAEAF2;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.2rem; /* Tamaño de fuente ligeramente más pequeño */
+    color: #EAEAF2;
+    text-shadow: 0 0 10px #7C82D5;
+    margin-top: 20px;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 20px;
+}
+
+#categories {
+    display: flex;
+    justify-content: space-evenly; /* Distribuir uniformemente */
+    align-items: center;
+    flex-wrap: nowrap; /* Evita que pasen a una nueva línea */
+    gap: 20px;
+}
+
+.category {
+    flex: 1; /* Para que todas las categorías tengan el mismo ancho */
+    max-width: 250px; /* Evita que sean demasiado grandes */
+    min-width: 200px; /* Evita que sean demasiado pequeñas */
+}
+
+.category:hover {
+    transform: scale(1.05);
+}
+
+/* Media query para ajustar en pantallas pequeñas */
+@media (max-width: 1024px) {
+    #categories {
+        flex-wrap: wrap; /* Permite que pasen a otra fila en pantallas pequeñas */
+    }
+    
+    .category {
+        width: 45%; /* Dos por fila en tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .category {
+        width: 90%; /* Una por fila en móviles */
+    }
+
+    h2 {
+        font-size: 1rem; /* Reducir tamaño de título */
+    }
+
+    button {
+        font-size: 1rem; /* Reducir tamaño de botones */
+    }
+}
+
+h2 {
+    font-size: 1rem; /* Tamaño de fuente más compacto */
+    color: #7C82D5;
+    text-shadow: 0 0 10px #7C82D5;
+}
+
+/* 🎵 Diseño de la canción con imagen de fondo */
+.song {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); /* Borde blanco brillante */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+/* 🔘 Botones con estilo neón */
+button {
+    font-size: 1rem; /* Se redujo el tamaño del botón */
+    padding: 8px 12px;
+    margin: 8px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+/* ❓ WHY botón */
+.why-btn {
+    background: #7C82D5;
+    color: #0100CB;
+    box-shadow: 0 0 10px #7C82D5;
+}
+
+.why-btn:hover {
+    background: #0100CB;
+    color: #EAEAF2;
+    box-shadow: 0 0 20px #7C82D5, 0 0 30px #EAEAF2;
+    transform: scale(1.1);
+}
+
+/* ▶️ Botón de play */
+.play-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: #EAEAF2;
+    box-shadow: 0 0 15px #EAEAF2;
+    font-size: 1.3rem;
+}
+
+.play-btn:hover {
+    background: #EAEAF2;
+    color: #0100CB;
+    box-shadow: 0 0 25px #7C82D5;
+    transform: scale(1.2);
+}
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background-color: white;
+}
+
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .content {
+        height: 30vh;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
+.footer-text {
+    width: 100%;
+    height: 10vh; /* Ajusta la altura según sea necesario */
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-text p {
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}

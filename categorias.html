@@ -1,190 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Playlist</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<style>
-    body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    }
-
-    .container {
-        max-width: 900px;
-        margin: 0 auto;
-        padding: 20px;
-        text-align: center;
-    }
-
-    h1 {
-        font-size: 2.5rem;
-        margin-bottom: 20px;
-        color: #2c3e50;
-    }
-
-    #categories {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-        gap: 20px;
-    }
-
-    .category {
-        padding: 20px;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        background-color: #fff;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-        color: #34495e;
-        margin-bottom: 15px;
-    }
-
-    .song {
-        margin: 15px 0;
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #ecf0f1;
-        border-radius: 5px;
-    }
-
-    button {
-        padding: 8px 12px;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        cursor: pointer;
-        background-color: #2980b9;
-        color: white;
-    }
-
-    button:hover {
-        background-color: #3498db;
-    }
-
-
-</style>
-
 <body>
     <div class="container">
-        <h1>🎵 Mi Playlist Interactiva 🎵</h1>
+        <h1>My Playlist For You Darling</h1>
         <div id="categories">
-            <!-- Categoría 1 -->
             <div class="category">
                 <h2>Aura Clásica</h2>
-                <div class="song">
-                    <p>Dance of the Knights - Sergei Prokofiev</p>
-                    <button onclick="playExplanation('audios/explanation1.mp3')">📢 Explicación</button>
-                    <button onclick="playSong('audios/dance_of_the_knights.mp3')">▶️ Escuchar</button>
+                <div class="song" style="background-image: url('imagenes/clasica.jpg');">
+                    <button class="why-btn" onclick="playExplanation('audios/clasica.mp3')">WHY</button>
+                    <button class="play-btn" onclick="playSong('audios/dance_of_the_knights.mp3')">▶️</button>
                 </div>
             </div>
 
-            <!-- Categoría 2 -->
             <div class="category">
                 <h2>Buen Ánimo</h2>
-                <div class="song">
-                    <p>Redbone - Donald Glover</p>
-                    <button onclick="playExplanation('audios/explanation2.mp3')">📢 Explicación</button>
-                    <button onclick="playSong('audios/redbone.mp3')">▶️ Escuchar</button>
+                <div class="song" style="background-image: url('imagenes/animo.jpg');">
+                    <button class="why-btn" onclick="playExplanation('audios/animo.mp3')">WHY</button>
+                    <button class="play-btn" onclick="playSong('audios/dance_of_the_knights.mp3')">▶️</button>
                 </div>
             </div>
 
-            <!-- Categoría 3 -->
             <div class="category">
                 <h2>Canciones Románticas</h2>
-                <div class="song">
-                    <p>Save Your Tears - The Weeknd</p>
-                    <button onclick="playExplanation('audios/explanation3.mp3')">📢 Explicación</button>
-                    <button onclick="playSong('audios/save_your_tears.mp3')">▶️ Escuchar</button>
+                <div class="song" style="background-image: url('imagenes/romance.jpg');">
+                    <button class="why-btn" onclick="playExplanation('audios/romance.mp3')">WHY</button>
+                    <button class="play-btn" onclick="playSong('audios/dance_of_the_knights.mp3')">▶️</button>
                 </div>
             </div>
-
-            <!-- Categoría 4 -->
+            
             <div class="category">
                 <h2>Canciones Tranquilas</h2>
-                <div class="song">
-                    <p>Ylang Ylang - ((( O ))) & FKJ</p>
-                    <button onclick="playExplanation('audios/explanation4.mp3')">📢 Explicación</button>
-                    <button onclick="playSong('audios/ylang_ylang.mp3')">▶️ Escuchar</button>
+                <div class="song" style="background-image: url('imagenes/tranquilidad.jpg');">
+                    <button class="why-btn" onclick="playExplanation('audios/tranquilidad.mp3')">WHY</button>
+                    <button class="play-btn" onclick="playSong('audios/dance_of_the_knights.mp3')">▶️</button>
                 </div>
             </div>
         </div>
-        <!-- Secciones de Categorías -->
-        <section id="aura-clasica">
-            <h2>Aura Clásica</h2>
-            <div class="song">
-                <p>Dance of the Knights - Sergei Prokofiev</p>
-                <button onclick="playExplanation('audios/explanation1.mp3')">📢 Explicación</button>
-                <button onclick="playSong('audios/dance_of_the_knights.mp3')">▶️ Escuchar</button>
-            </div>
-            <div class="back-to-top">
-                <a href="#categories">⬆️ Volver a Categorías</a>
-            </div>
-        </section>
-
-        <section id="buen-animo">
-            <h2>Buen Ánimo</h2>
-            <div class="song">
-                <p>Redbone - Donald Glover</p>
-                <button onclick="playExplanation('audios/explanation2.mp3')">📢 Explicación</button>
-                <button onclick="playSong('audios/redbone.mp3')">▶️ Escuchar</button>
-            </div>
-            <div class="back-to-top">
-                <a href="#categories">⬆️ Volver a Categorías</a>
-            </div>
-        </section>
-
-        <section id="canciones-romanticas">
-            <h2>Canciones Románticas</h2>
-            <div class="song">
-                <p>Save Your Tears - The Weeknd</p>
-                <button onclick="playExplanation('audios/explanation3.mp3')">📢 Explicación</button>
-                <button onclick="playSong('audios/save_your_tears.mp3')">▶️ Escuchar</button>
-            </div>
-            <div class="back-to-top">
-                <a href="#categories">⬆️ Volver a Categorías</a>
-            </div>
-        </section>
-
-        <section id="canciones-tranquilas">
-            <h2>Canciones Tranquilas</h2>
-            <div class="song">
-                <p>Ylang Ylang - ((( O ))) & FKJ</p>
-                <button onclick="playExplanation('audios/explanation4.mp3')">📢 Explicación</button>
-                <button onclick="playSong('audios/ylang_ylang.mp3')">▶️ Escuchar</button>
-            </div>
-            <div class="back-to-top">
-                <a href="#categories">⬆️ Volver a Categorías</a>
-            </div>
-        </section>
     </div>
-
+    
+    <footer>
+        <div>
+            <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+                <defs>
+                    <path id="gentle-wave"
+                        d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+                </defs>
+                <g class="parallax">
+                    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+        <div class="footer-text">
+            <p>BY VOT</p>
+        </div>    
+    </footer>
     <audio id="audioPlayer" controls style="display: none;"></audio>
     <script src="script.js"></script>
 </body>
-<script>
-    const audioPlayer = document.getElementById('audioPlayer');
-
-    function playExplanation(audioPath) {
-        audioPlayer.src = audioPath;
-        audioPlayer.play();
-        alert("Escuchando la explicación...");
-    }
-
-    function playSong(songPath) {
-        audioPlayer.src = songPath;
-        audioPlayer.play();
-        alert("Reproduciendo la canción...");
-    }
-
-</script>
 </html>
