@@ -78,20 +78,37 @@ h2 {
 
 /* 🎵 Diseño de la canción con imagen de fondo */
 .song {
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 180px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px 5px rgba(255, 255, 255, 0.8); /* Borde blanco brillante */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    width: 200px; /* Ajusta según sea necesario */
+    height: 200px; /* Ajusta según sea necesario */
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px 5px rgba(255, 255, 255, 0.7); /* Sombra blanca más brillante */
+    position: relative;
+    padding: 10px;
+}
+.song button {
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
+.why-btn {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+.play-btn {
+    background-color: black;
+    color: white;
+}
 
 /* 🔘 Botones con estilo neón */
 button {
@@ -106,33 +123,36 @@ button {
     transition: 0.3s ease-in-out;
 }
 
-/* ❓ WHY botón */
-.why-btn {
-    background: #7C82D5;
-    color: #0100CB;
-    box-shadow: 0 0 10px #7C82D5;
-}
-
 .why-btn:hover {
-    background: #0100CB;
-    color: #EAEAF2;
-    box-shadow: 0 0 20px #7C82D5, 0 0 30px #EAEAF2;
-    transform: scale(1.1);
-}
-
-/* ▶️ Botón de play */
-.play-btn {
-    background: rgba(255, 255, 255, 0.2);
-    color: #EAEAF2;
-    box-shadow: 0 0 15px #EAEAF2;
-    font-size: 1.3rem;
+    background-color: black;
+    color: white;
 }
 
 .play-btn:hover {
-    background: #EAEAF2;
-    color: #0100CB;
-    box-shadow: 0 0 25px #7C82D5;
-    transform: scale(1.2);
+    background-color: white;
+    color: black;
+}
+/* Para alinear los botones en fila */
+.song {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.song button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    margin: 5px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 .waves {
     position: relative;
@@ -235,4 +255,70 @@ button {
     background-color: black;
     color: white;
     font-family: 'Emilys Candy', serif;
+}
+
+/*tranquilas
+/* Contenedor principal */
+.music-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* Lista de canciones */
+.song-list {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    gap: 10px;
+}
+
+.song-item {
+    background-color: #444; /* Gris oscuro */
+    color: white; /* Texto en blanco */
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 3px rgba(255, 255, 255, 0.3); /* Sombra blanca tenue */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    text-align: center;
+}
+
+.song-item:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Reproductor de video */
+.video-player {
+    width: 100%;
+    max-width: 500px;
+}
+
+.video-player iframe {
+    width: 100%;
+    height: 280px;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5); /* Sombra blanca más pronunciada */
+}
+
+/* Diseño responsivo */
+@media (min-width: 768px) {
+    .music-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .song-list {
+        max-width: 45%;
+    }
+
+    .video-player {
+        max-width: 50%;
+    }
 }
