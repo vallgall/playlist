@@ -5,10 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Playlist</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <h1>My Playlist For You Darling</h1>
+        <div class="button-container">
+            <button class="play-button" onclick="playExplanation('audios/intro.mp3')">Reprodúceme</button>
+        </div>
         <div id="categories">
             <div class="category">
                 <h2>Aura Clásica</h2>
@@ -61,7 +67,7 @@
             </svg>
         </div>
         <div class="footer-text">
-            <p>BY VOT</p>
+            <p>By VOT</p>
         </div>    
     </footer>
     <audio id="audioPlayer" controls style="display: none;"></audio>
