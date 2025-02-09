@@ -10,24 +10,29 @@
     <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <a href="categorias.html" class="back-button">← Categoría</a>
+    <canvas id="smokeCanvas"></canvas>
     <h1>Playlist Clásica 🎻</h1>
 
     <div class="music-container">
         <!-- Reproductor de Video -->
         <div class="video-player">
-            <iframe id="videoFrame" src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
+            <iframe id="videoFrame" src="https://www.youtube.com/embed/0gItJKDFiGo?si=-vZPxvMMSa76kiQ4" frameborder="0" allowfullscreen></iframe>
         </div>
         <!-- Lista de canciones -->
         <div class="song-list">
+            <div class="song-item" data-video="https://www.youtube.com/embed/0gItJKDFiGo?si=-vZPxvMMSa76kiQ4">Still Living : Hustinder</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/ThLbhUEIrII?si=stgpwZCEfeVzJ2lt">Furioso in F Minor</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/u0ovbZs4fHA?si=7bj1n5EZ8WBl-HTW">Succession Main Theme</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/InKuLs54pa4?si=_G9o-BJfINcFwfYQ">enemies to lovers</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/bBsKplb2E6Q?si=YfRMCt-ulS4Xr5B7">Prokofiev - Dance of the Knights</div>
-            <div class="song-item" data-video="https://www.youtube.com/embed/q25O0jogGf8?si=4kFov23gPQJhJfvv">Siouxsie – Love Crime</div>
+            
             <div class="song-item" data-video="https://www.youtube.com/embed/G71DmxRvpzc?si=Vbuo4IH-lSy_6TlR">Black Swan (Orchestra ver.)</div>
-            <div class="song-item" data-video="https://www.youtube.com/embed/0gItJKDFiGo?si=-vZPxvMMSa76kiQ4">Still Living : Hustinder</div>
+            
             <div class="song-item" data-video="https://www.youtube.com/embed/s3PUwbwh5-E?si=yaRlq_UlsNYvqPxb">A Shadow's Lament</div>
+            <div class="song-item" data-video="https://www.youtube.com/embed/q25O0jogGf8?si=4kFov23gPQJhJfvv">Siouxsie – Love Crime
+                <button class="why-btn" onclick="playExplanation('audios/hannibal.mp3')">WHY</button>
+            </div>
         </div>
 
         
@@ -52,6 +57,7 @@
             <p>By VOT</p>
         </div>    
     </footer>
+    <audio id="audioPlayer" controls style="display: none;"></audio>
     <script src="script.js"></script>
 
 </body>

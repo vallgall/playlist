@@ -25,6 +25,8 @@ h1 {
     width: 90%;
     margin: auto;
     padding: 20px;
+    padding-top: 5%;
+    padding-bottom: 4%;
 }
 
 #categories {
@@ -291,6 +293,9 @@ button {
 
 /* Estilos de cada canción */
 .song-item {
+    display: flex; /* Necesario para que justify-content funcione */
+    align-items: center; /* Alinea verticalmente el texto y el botón */
+    justify-content: space-between; 
     background-color: #444; /* Gris oscuro */
     color: white; /* Texto en blanco */
     padding: 15px;
@@ -333,4 +338,30 @@ button {
     .video-player {
         max-width: 50%;
     }
+}
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+.back-button {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #ffffff;
+    color: #333;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #ddd;
 }

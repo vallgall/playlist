@@ -10,14 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <a href="categorias.html" class="back-button">← Categoría</a>
+    <canvas id="smokeCanvas"></canvas>
     <h1>Playlist Buen Ánimo 🎉</h1>
 
     <div class="music-container">
         
         <!-- Reproductor de Video -->
         <div class="video-player">
-            <iframe id="videoFrame" src="https://www.youtube.com/embed/VIDEO_ID1" frameborder="0" allowfullscreen></iframe>
+            <iframe id="videoFrame" src="https://www.youtube.com/embed/uOlCYVXOyFI?si=OJ0fONJBF_owJ0qC" frameborder="0" allowfullscreen></iframe>
         </div>
         <!-- Lista de canciones -->
         <div class="song-list">
@@ -29,7 +30,7 @@
             <div class="song-item" data-video="https://www.youtube.com/embed/esT-m_pGjWo?si=d2qkWYNsXgeOxMx-">Don't Wanna Fall In Love - Kyle</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/0_lGbe3VmbY?si=gWYKVjXgt3mOC-4a">prey - the neighbourhood</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/u6lihZAcy4s?si=bS-N_6jGUua2EwWV">The Weeknd - Save Your Tears</div>
-            <div class="song-item" data-video="https://www.youtube.com/embed/_GMQLjzVGfw?si=VKUzo_OFYeI2Z5Lb">Foster The People - Houdini</div>
+            
             <div class="song-item" data-video="https://www.youtube.com/embed/gTMWO7ovAXk?si=evyMUL6Lr88f0ig7">Will Paquin - Chandelier</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/UKp2CrfmVfw?si=L0VLLnLlHl64v6fq">Alessia Cara - Here</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/zG5YzRxOcsI?si=m6KlGJ32efbBuPCr">MILLION DOLLAR BABY</div>
@@ -40,7 +41,9 @@
             <div class="song-item" data-video="https://www.youtube.com/embed/xYEGwbMmIWU?si=2XB6pQL0YzyGkEog">DEVIL IS A LIE</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/SrnWp5O0DEs?si=eocgr5XgIWeHidW5">Hit the Road Jack</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/Od8BLS0huVU?si=EZ8Ofq_kj4_r3A79">BTS Cypher 4</div>
-
+            <div class="song-item" data-video="https://www.youtube.com/embed/_GMQLjzVGfw?si=VKUzo_OFYeI2Z5Lb">Foster The People - Houdini
+                <button class="why-btn" onclick="playExplanation('audios/houdini.mp3')">WHY</button>
+            </div>
         </div>
 
     </div>
@@ -64,6 +67,7 @@
             <p>By VOT</p>
         </div>    
     </footer>
+    <audio id="audioPlayer" controls style="display: none;"></audio>
     <script src="script.js"></script>
 
 </body>

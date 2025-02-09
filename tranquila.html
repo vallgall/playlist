@@ -10,29 +10,41 @@
     <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="categorias.html" class="back-button">← Categoría</a>
 
+    <canvas id="smokeCanvas"></canvas>
     <h1>Playlist de Canciones Tranquilas</h1>
 
     <div class="music-container">
         <!-- Reproductor de Video -->
         <div class="video-player">
-            <iframe id="videoFrame" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+            <iframe id="videoFrame" src="https://www.youtube.com/embed/6JDTYyZnkyA?si=MAj4ZiWetX1HTclu" frameborder="0" allowfullscreen></iframe>
         </div>
         <!-- Lista de Canciones -->
         <div class="song-list">
-            <div class="song-item" data-video="https://www.youtube.com/embed/gAanWPwkkas?si=6SPrRervU3urwRNm">SYML - Fear of the Water</div>
-            <div class="song-item" data-video="https://www.youtube.com/embed/32L9bAGPhhY?si=8cGRxNBm43xl7I86">Pacifica</div>
-            <div class="song-item" data-video="https://www.youtube.com/embed/5OIeIaAhQOg?si=3HdeDCFkLOu9ziSh">Gibran Alcocer - Idea 10</div>
-            <div class="song-item" data-video="https://www.youtube.com/embed/8Da7RgPXCmU?si=SCHwRJ6EIfahjxGM">Idea 22</div>
-            <div class="song-item" data-video="https://www.youtube.com/embed/6LRQUh-M-Lc?si=kCTQkBJCYUDWdTTD">I Love You When I Drink Champagne by Eric Christian</div>
-            <div class="song-item" data-video="https://www.youtube.com/embed/EfgAd6iHApE?si=5MegB_f02Y-YpgGP">FKJ - Ylang Ylang</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/6JDTYyZnkyA?si=MAj4ZiWetX1HTclu">ykwim? - yot club</div>
+            <div class="song-item" data-video="https://www.youtube.com/embed/8Da7RgPXCmU?si=SCHwRJ6EIfahjxGM">Idea 22</div>
+            <div class="song-item" data-video="https://www.youtube.com/embed/EfgAd6iHApE?si=5MegB_f02Y-YpgGP">FKJ - Ylang Ylang</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/Q9MQuVq3HPY?si=2rOmyHUKEqsViCRi">Anime</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/QzlcxmVBIFo?si=4-E4n4SQOyPggJLU">Gibran Alcocer - Idea 1</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/8G9CMXb89rU?si=jO4LEyoq0ypLYDyN">Lauv - Who ft. BTS</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/IoOli-fR_cs?si=FMwmxDKzHSUNK_wH">Russ - Cherry Hill</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/4-hI8EkCvnk?si=GG5rkfRrVM23_vsh">I See You</div>
             <div class="song-item" data-video="https://www.youtube.com/embed/wWxMdvjbV9E?si=wDaNoch_p2tTB0MT">Two Feet - You're So Cold</div>
+            <div class="song-item" data-video="https://www.youtube.com/embed/gAanWPwkkas?si=6SPrRervU3urwRNm">SYML - Fear of the Water
+                <button class="why-btn" onclick="playExplanation('audios/fear.mp3')">WHY</button>
+            </div>
+            <div class="song-item" data-video="https://www.youtube.com/embed/32L9bAGPhhY?si=8cGRxNBm43xl7I86">Pacifica
+                <button class="why-btn" onclick="playExplanation('audios/pacify.mp3')">WHY</button>
+            </div>
+            <div class="song-item" data-video="https://www.youtube.com/embed/5OIeIaAhQOg?si=3HdeDCFkLOu9ziSh">Gibran Alcocer - Idea 10
+                <button class="why-btn" onclick="playExplanation('audios/idea.mp3')">WHY</button>
+            </div>
+            
+            <div class="song-item" data-video="https://www.youtube.com/embed/6LRQUh-M-Lc?si=kCTQkBJCYUDWdTTD">I Love You When I Drink Champagne
+                <button class="why-btn" onclick="playExplanation('audios/champagne.mp3')">WHY</button>
+            </div>
+            
         </div>
 
         
@@ -57,7 +69,9 @@
             <p>By VOT</p>
         </div>    
     </footer>
+    <audio id="audioPlayer" controls style="display: none;"></audio>
     <script src="script.js"></script>
+    
 </body>
 </html>
 
